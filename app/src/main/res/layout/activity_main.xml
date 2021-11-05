@@ -5,19 +5,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#DA75D7"
     tools:context=".MainActivity">
+
+
+    <ImageView
+        android:layout_width="280dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="88dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04"
+        android:background="@color/white"
+        android:src="@drawable/jolie_wallpaper"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#B3DAD7"
+        android:hint="What her name is?:"
+        android:labelFor="@id/edit_text_input1"
+        app:layout_constraintBottom_toTopOf="@id/edit_text_input1" />
 
     <EditText
         android:id="@+id/edit_text_input1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="input text here 1:"
-        android:textSize="30sp"
+        android:text="                                                          "
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/teal_200"/>
+                android:background="@color/white"
+        android:padding="30dp"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_go_second_page"
@@ -27,7 +52,9 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:text="Go to second page"
-        app:cornerRadius="16dp"
+        app:cornerRadius="26dp"
+        android:background="#490846"
+        android:padding="10dp"
         />
 
     <com.google.android.material.button.MaterialButton
@@ -37,8 +64,10 @@
         app:layout_constraintTop_toBottomOf="@id/btn_go_second_page"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:text="history"
-        app:cornerRadius="16dp"
+        android:text="history of actresses names"
+        app:cornerRadius="26dp"
+        android:background="#490846"
+        android:padding="10dp"
         />
 
 

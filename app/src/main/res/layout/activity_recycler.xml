@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".RecyclerActivity"
     android:orientation="vertical"
-    android:padding="20dp">
+    android:padding="20dp"
+    android:background="#B6F1F1">
 
     <TextView
         android:id="@+id/tv_recycler_screen"
@@ -18,6 +19,7 @@
         android:visibility="gone"
         android:text="Вернитесь на первый экран и введите слова"
         android:textSize="25sp"
+        android:background="@color/white"
                 />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -29,7 +31,4 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                  />
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

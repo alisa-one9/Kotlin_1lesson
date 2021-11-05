@@ -5,8 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#EAE68F"
     tools:context=".MainActivity2">
 
+    <ImageView
+        android:layout_width="280dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="88dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04"
+        android:background="@color/white"
+        android:src="@drawable/monicabellucci"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/edit_text_input1"
+        app:layout_constraintBottom_toTopOf="@id/edit_text_input2"
+        android:background="#BEBF7F"
+        android:hint="What her name  is ?:"/>
     <EditText
         android:id="@+id/edit_text_input2"
         android:layout_width="wrap_content"
@@ -15,9 +36,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:hint="Input text here 2:"
-        android:background="@color/teal_200"
-        android:textSize="30dp"/>
+        android:hint="                                   "
+        android:background="@color/white"
+        android:textSize="20sp"
+        android:padding="10dp"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_go_second_page"
@@ -27,6 +49,8 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:text="Go to first page"
-        app:cornerRadius="16dp"/>
+        app:cornerRadius="26dp"
+        android:background="#45191D"
+        android:padding="10dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
