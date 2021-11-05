@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#DA75D7"
+    android:padding="20dp"
     tools:context=".MainActivity">
 
 
@@ -35,7 +36,7 @@
         android:id="@+id/edit_text_input1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="                                                          "
+        android:hint="input here:"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#EAE68F"
+    android:padding="20dp"
     tools:context=".MainActivity2">
 
     <ImageView
@@ -36,7 +37,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:hint="                                   "
+        android:hint="input here:"
         android:background="@color/white"
         android:textSize="20sp"
         android:padding="10dp"/>
