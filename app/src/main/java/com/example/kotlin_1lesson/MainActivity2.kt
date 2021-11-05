@@ -19,16 +19,15 @@ class MainActivity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         viewBinding = ActivityMain2Binding.inflate(layoutInflater)
         setContentView(viewBinding.root)
-        checkData()
-        viewBinding.btnGoSecondPage.setOnClickListener {
-
+        reciveData()
+        viewBinding.btnGoFirstPage.setOnClickListener {
             startFirstActivity()
         }
 
         this.title = "SecondActicity"
     }
 
-    private fun checkData() {
+    private fun reciveData() {
         val text: String? = intent.getStringExtra(Keys.TEXT_KEY)
         viewBinding.editTextInput2.setText(text)
     }
@@ -36,14 +35,14 @@ class MainActivity2 : AppCompatActivity() {
     private fun startFirstActivity() {
         if (viewBinding.editTextInput2.text.isNullOrEmpty()) {
             Toast.makeText(
-                this, "Введите слова в поле",
+                this, "Введите имя в поле",
                 Toast.LENGTH_SHORT).show()
         } else {
-            send()
+            sendToFirstActivity()
         }
     }
 
-    private fun send() {
+    private fun sendToFirstActivity() {
         val intent = Intent(this, MainActivity::class.java)
         intent.putExtra(Keys.TEXT_KEY,viewBinding.editTextInput2.text.toString())
         setResult(Activity.RESULT_OK,intent)

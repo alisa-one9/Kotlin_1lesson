@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         resultLauncher =
             registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
                 if (result.resultCode == Activity.RESULT_OK) {
-                    checkEditText1(result.data)
+                    makeEditText1(result.data)
                 }
             }
 
@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun checkEditText1(data: Intent?) {
+    private fun makeEditText1(data: Intent?) {
         if(data != null){
             val text =data.getStringExtra(Keys.TEXT_KEY)
             viewBinding.editTextInput1.setText(text)
@@ -51,12 +51,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun startSecondActivity() {
         if (viewBinding.editTextInput1.text.isNullOrEmpty()) {
-            Toast.makeText(this,"Введите текст, поле не может быть пустым", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Введите имя актрисы, белое поле не может быть пустым", Toast.LENGTH_SHORT).show()
         }
-        else send()
+        else sendToSecondActivity()
     }
 
-    private fun send() {
+    private fun sendToSecondActivity() {
         val intent =Intent(this, MainActivity2::class.java)
         intent.putExtra(Keys.TEXT_KEY,viewBinding.editTextInput1.text.toString())
         resultLauncher.launch(intent)
@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
 
 class Keys {
     companion object{
-        const val TEXT_KEY = "textFromSecondActivity"
+        const val TEXT_KEY = "textForSecondActivity"
     }
 
 }
